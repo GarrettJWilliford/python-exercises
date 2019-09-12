@@ -15,14 +15,16 @@ def is_vowel(inp):
 
 
 def is_consonant(inp):
-    if is_vowel(inp) == True:
+    if is_vowel(inp) == False:
         return True
     return False
 
 def string_word(inp):
-    if is_consonant(inp) == True:
+    if is_consonant(inp[0]) == True:
         return inp.capitalize()
     return inp
+
+
 
 calculate_tip = lambda amount, percentage : (amount / 100) * (percentage * 100)
 
@@ -75,3 +77,5 @@ def twelveto24(inp):
     if inp[5] == 'p' or inp[4] == 'p':
         new_inp += 1200
     return str(new_inp)
+
+print(twelveto24('06:45pm'))
