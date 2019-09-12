@@ -75,12 +75,36 @@ def ten_multi(inp):
         return total_calc
     except:
         return 'error'
-
-def repeating_numbers(length):
-    list_long = [i for i in range(1, length + 1)]
     
+def repeating_numbers(length):
+    num_count = 1
+    for i in range(length + 1):
+        num_list = []
+        for i in range(num_count):
+            num_list.append(str(num_count))
+        print(''.join(num_list))
+        num_count += 1
 
 
+def positive_ip(inp):
+    try:
+        inp = int(inp)
+    except:
+        print('error code 1: Not valid number')
+        return
+    for i in range(0, inp + 1):
+        print(str(i))
+    
+  
+def positive_down(inp):
+    try:
+        inp = int(inp)
+    except:
+        print('error code 1: Not valid number')
+        return
+    for i in range(inp, 0, -1):
+        print(str(i))
+    
 
 def skipdigit():
     inp = input('Pick a number>> ')
@@ -96,7 +120,7 @@ def skipdigit():
         if i != inp and (inp % 2) == 1:
             print(str(i))
 
-def print_num():
+def fizzbuzz():
     for i in range(1, 101):
         if i % 3 == 0 and i % 5 == 0:
             print('FizzBuzz')
@@ -113,31 +137,25 @@ def print_num():
 
 def table_of_powers():
     start_num = 1
+    try:
+        inp = int(input('What Number do you want to go to? >> '))
+    except:
+        print('error code 1: Not a number')
+        return
+    end_num = start_num + inp
+    isfirst = True
     while True:
-        try:
-            inp = int(input('What number would you like to go up to? >> '))
-            end_num = inp
-        except:
-            print('Not valid as integer')
-        isfirst = True
-        while True:
-            while isfirst == False:
-                command = input('Continue?([Y]/[N]) >> ')
-                if command == 'N':
-                    return
-                if command == 'Y':
-                    start_num += inp
-                    end_num += inp
-                    break
-                else:
-                    print('Not Valid Command')
-            isfirst = True
-            print('Number |  Squared  | Cubed')
-            print('--------------------------')
-            for i in range(start_num, end_num + 1):
-                square = i ** 2
-                cube = i ** 3
-                print(' {}    |    {}     |  {}'.format(i, square, cube))
-
-
-
+        if isfirst == False:
+            continuee = input('Continue? >> ')
+            if continuee == 'Y':
+                start_num += inp
+                end_num += inp
+            if continuee == 'N':
+                return
+        for i in range(start_num, end_num):
+            square = i ** 2
+            cube = i ** 2
+            print(' {}    |    {}     |  {}'.format(i, square, cube))
+        isfirst = False
+            
+  
