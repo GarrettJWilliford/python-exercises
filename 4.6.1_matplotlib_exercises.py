@@ -6,9 +6,10 @@ import math
 
 
 def one():
-    x = range(1, 10)
+    x = range(0, 10)
     y = [(n ** 2) - n + 2 for n in x]
     plt.plot(x, y)
+    plt.plot(0, 0) 
     plt.show()
 
 
@@ -21,21 +22,22 @@ def four_list_one():
     plt.show()
 
 def four_list_two():
-    x = range(1, 6)
+    x = range(-5, 6)
     y = [n ** 3 for n in x]
     return x, y
     plt.plot(x, y)
     plt.show()
 
 def four_list_three():
-    x = range(1, 6)
+    x = range(-5, 6)
     y = [math.tan(n) for n in x]
     return x, y
     plt.plot(x, y)
     plt.show()
 
+
 def four_list_four():
-    x = range(1, 6)
+    x = range(-5, 6)
     y = [2 ** n for n in x]
     return x, y
     plt.plot(x, y)
@@ -68,7 +70,7 @@ def the_four_lines():
     x2, y2 = four_list_two()
     x3, y3 = four_list_three()
     x4, y4 = four_list_four()
-    plt.plot( x1, y1, marker='', markerfacecolor='blue', markersize=12, color='blue', linewidth=2, label = 'one')
+    plt.plot( x1, y1, marker='', markerfacecolor='blue', color='blue', linewidth=2, label = 'one')
     plt.plot( x2, y2, marker='', color='red', linewidth=2, label = 'two')
     plt.plot( x3, y3, marker='', color='green', linewidth=2, label = 'three')
     plt.plot(x4, x4, marker = '', color = 'brown', linewidth = 2, label = 'four')
