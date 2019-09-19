@@ -22,7 +22,7 @@ def four_list_one():
     plt.show()
 
 def four_list_two():
-    x = range(-5, 6)
+    x = range(-4, 5)
     y = [n ** 3 for n in x]
     return x, y
     plt.plot(x, y)
@@ -34,6 +34,8 @@ def four_list_three():
     return x, y
     plt.plot(x, y)
     plt.show()
+
+four_list_two()
 
 
 def four_list_four():
@@ -76,3 +78,6 @@ def the_four_lines():
     plt.plot(x4, x4, marker = '', color = 'brown', linewidth = 2, label = 'four')
     plt.legend()
     plt.show()
+
+the_four_lines()
+
