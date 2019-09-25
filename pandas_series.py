@@ -59,6 +59,8 @@ def scores_pandas():
     print(min(scores))
     plt.hist(scores, 4)
     plt.show()
+    print(pd.cut(scores, bins = [0, 60, 70, 80, 90, 100],\
+         labels = ['F', 'D', 'C', 'B', 'A']))
     print(scores + (100 - max(scores)))
 
 
