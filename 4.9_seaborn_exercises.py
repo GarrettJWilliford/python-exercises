@@ -10,12 +10,11 @@ import pydataset
 def iris_s():
     iris = pydataset.data('iris')
     print(iris)
-    f, axes = plt.subplots(2, 2, figsize=(7, 7), sharex=True)
     sns.despine(left=True)
-    sns.barplot(data = iris, x = 'Species', y = 'Petal.Length', ax=axes[0, 0])
-    sns.lineplot(data = iris, x = 'Petal.Length', y = 'Petal.Width', ax=axes[1, 0])
-    sns.lmplot(data = iris, x = 'Sepal.Length', y = 'Sepal.Width', hue = 'Species', ax=axes[0, 1])
-    sns.scatterplot(data = iris, x = 'Petal.Length', y = 'Petal.Width', hue = 'Species', ax=axes[1, 1])
+    sns.barplot(data = iris, x = 'Species', y = 'Petal.Length')
+    sns.lineplot(data = iris, x = 'Petal.Length', y = 'Petal.Width')
+    sns.lmplot(data = iris, x = 'Sepal.Length', y = 'Sepal.Width', hue = 'Species')
+    sns.scatterplot(data = iris, x = 'Petal.Length', y = 'Petal.Width', hue = 'Species')
 
     plt.show()
 
